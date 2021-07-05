@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Build a table</title>
+	</head>
+	<body>
+		<h1>Mountains</h1>
+		<div id="mountains">
+		</div>
+	</body>
+	<script type="text/javascript">
+
+		const MOUNTAINS = [
+		{name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+		{name: "Everest", height: 8848, place: "Nepal"},
+		{name: "Mount Fuji", height: 3776, place: "Japan"},
+		{name: "Vaalserberg", height: 323, place: "Netherlands"},
+		{name: "Denali", height: 6168, place: "United States"},
+		{name: "Popocatepetl", height: 5465, place: "Mexico"},
+		{name: "Mont Blanc", height: 4808, place: "Italy/France"}
+		];
+
+		let contenedor = document.getElementById("mountains");
+		let tabla = document.createElement("table");
+
+		let filaCabecera = document.createElement("tr");
+
+		let colCabecera1 = document.createElement("th");
+		colCabecera1.appendChild(document.createTextNode("name"));
+
+		let colCabecera2 = document.createElement("th");
+		colCabecera2.appendChild(document.createTextNode("height"));
+
+		let colCabecera3 = document.createElement("th");
+		colCabecera3.appendChild(document.createTextNode("place"));
+
+		filaCabecera.appendChild(colCabecera1)
+		filaCabecera.appendChild(colCabecera2)
+		filaCabecera.appendChild(colCabecera3)
+
+		tabla.appendChild(filaCabecera);
+
+		for (let m of MOUNTAINS) {
+			let fila = document.createElement("tr");
+
+			let col1 = document.createElement("td");
+			col1.appendChild(document.createTextNode(m.name));
+
+			let col2 = document.createElement("td");
+			col2.appendChild(document.createTextNode(m.height));
+
+			let col3 = document.createElement("td");
+			col3.appendChild(document.createTextNode(m.place));
+
+			fila.appendChild(col1);
+			fila.appendChild(col2);
+			fila.appendChild(col3);
+
+			tabla.appendChild(fila);
+		}
+
+		contenedor.appendChild(tabla);
+
+	</script>
+</html>

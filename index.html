@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Chapter 14</title>
+		<style type="text/css">
+			strong {
+				font-style: italic;
+				color: gray;
+			}
+
+			#cat {
+				position: relative;
+				width: 120px;
+				height: 120px;
+			}
+
+			#hat {
+				position: relative;
+				width: 100px;
+				height: 100px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<p style="text-align: center">
+			<img src="cat.jpg" id = "cat">
+		</p>
+		<p style="text-align: center">
+			<img src="hat.jpg" id = "hat">
+		</p>
+		<p style="border: 3px solid red">
+			I'm boxed in
+		</p>
+		<p id="para" style="color:purple">
+			Nice text
+		</p>
+		<p>Now <strong>strong text</strong> is italic and gray.</p>
+		<h1>My home page</h1>
+		<ul>
+			<li>First</li>
+			<li>Second</li>
+			<li>Third</li>
+		</ul>
+		<blockquote id="quote">
+			No book can ever be finished. While working on it we learn just enough to find it immature
+			the moment we turn away from it.
+		</blockquote>
+		<button onclick="appendNotes();">More information</button>
+		<p data-classified = "secret">The launch code is 00000000</p>
+		<button onclick="ocultar();">ocultar</button>
+		<p data-classified = "unclassified">I have two feet.</p>
+		<p id = "presentation">Hello, I am Marijn</p>
+		<button onclick="colorear();">Colorear</button>
+		<p>I also wrote a book! Read it <a href="https://eloquentjavascript.net/">here</a>.</p>
+		<button onclick="replaceImages();">Replace</button>
+		<p>Artificial intelligence</p>
+		<img id = "ia" src="iamldl.png" alt="Artificial intelligence, Machine learning and Deep learning">
+		<img src="ia_ml_otros.jpg" alt = "Otros">
+	</body>
+	<script type="text/javascript" src="program.js"></script>
+</html>
